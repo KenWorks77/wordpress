@@ -1,5 +1,5 @@
 # wordpress
-KenWorks77 website renewal work with WordPress and PHP.
+KenWorks77 website renewal work with WordPress and PHP.  
 https://kenworks77.sakura.ne.jp/wp/
 
 index.php  
