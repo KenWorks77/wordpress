@@ -1,0 +1,45 @@
+@use "../global" as g;
+
+#wrap {
+  h1.c-single-h1 {
+    color: g.$mainColor;
+    font-size: g.$xxlFontSize;
+    padding: 25px 0 0 0;
+  }
+  > p {
+    line-height: 1.7;
+    padding: 0 0 10px 0;
+  }
+  figure.wp-block-image,
+  figure.wp-block-embed {
+    padding: 10px 0;
+  }
+  nav#bottom-navi {
+    ul {
+      display: flex;
+      margin-top: 10px;
+      li {
+        width:33.3%;
+        &:nth-child(2) {
+          text-align: center;
+        }
+        &:nth-child(3) {
+          text-align: right;
+        }
+      }
+    }
+  }
+  h2.swiper-h2 {
+    border-top: 1px dotted g.$formColor;
+    font-family: g.$titleFont;
+    font-size: g.$xlFontSize;
+    margin-top: 20px;
+    padding: 25px 0 0 1px;
+  }
+  div.swiper {
+    margin: 2px 0 30px 0;
+    h3 {
+      margin: 5px 5px 0 5px;
+    }
+  }
+}

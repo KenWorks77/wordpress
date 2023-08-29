@@ -1,0 +1,37 @@
+// wrap width
+$media-pc: 1000px; // 930px + 35px + 35px
+$media-tb: 550px;
+$media-sp: 375px;
+
+// break point
+$breakPoint: (
+  pc: 'screen and (min-width: #{$media-pc})',
+  tb: 'screen and (max-width: #{$media-tb})',
+  sp: 'screen and (max-width: #{$media-sp})'
+);
+
+// common color
+$mainColor: #21759b;
+$fontColor: #444;
+$subFontColor: #757575;
+$bgColor: #e6e6e6;
+$wrapBgColor: #fff;
+$formColor: #ccc;
+$white: #fff;
+$red: #f00;
+
+// font-family
+$bodyFont: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+$titleFont: 'Racing Sans One', cursive;
+
+// font-size
+$baseFontSize: 14px;
+$ciFontSize: 2.8rem;
+$xxxlFontSize: 2rem;
+$xxlFontSize: 1.7rem;
+$xlFontSize: 1.4rem;
+$lFontSize: 1.15rem;
+$mFontSize: 1rem;
+$sFontSize: 0.9rem;
+$xsFontSize: 0.8rem;
+$xxsFontSize: 0.7rem;

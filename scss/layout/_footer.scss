@@ -1,0 +1,18 @@
+@use "../global" as g;
+
+footer {
+  align-items: baseline;
+  display: flex;
+  border-top: 3px double g.$formColor;
+  margin-top: 5px;
+  padding-top: 15px;
+  h1 {
+    font-family: g.$titleFont;
+    font-size: g.$xlFontSize;
+  }
+}
+#scroll-top {
+  padding-top: 30px;
+  text-align: right;
+}
+

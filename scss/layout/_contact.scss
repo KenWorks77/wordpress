@@ -1,0 +1,35 @@
+@use "../global" as g;
+
+div#contact {
+  margin: 0 auto;
+  padding: 0 0 20px 0;
+  width: 70%;
+  h1 {
+    font-family: g.$titleFont;
+    font-size: g.$xxxlFontSize;
+    padding: 25px 0 10px 0; 
+  }
+  ul {
+    padding-bottom: 20px;
+    li {
+      input:not([type=submit]) {
+        width: 100%;
+      }
+      span.mwform-tel-field {
+        input {
+          width: 20%;
+        }
+      }
+      textarea {
+        resize: none;
+        width: 100%;
+      }
+      span.error {
+        display: inline;
+      }
+    }
+  }
+  p.complete {
+    line-height: 1.7;
+  }
+}

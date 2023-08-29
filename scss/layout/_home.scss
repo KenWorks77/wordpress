@@ -1,0 +1,44 @@
+@use "../global" as g;
+
+#wrap {
+  p#home-notice {
+    font-family: g.$titleFont;
+    font-size: g.$lFontSize;
+    padding: 20px 0 5px 0;
+  }
+  div#home-latest {
+    h1 {
+      font-size: g.$xlFontSize;
+      padding-top: 10px;
+    }
+    > p {
+      line-height: 1.7;
+    }
+  }
+  div#home-div {
+    display: flex;
+    flex-wrap: wrap;
+    @include g.mediaQuery(sp) {
+      display: block;
+    }
+      > div {
+      width: 50%;
+      padding: 0 10px;
+      @include g.mediaQuery(sp) {
+        width: 100%;
+      }
+      h1.home-h1 {
+        font-family: g.$titleFont;
+        font-size: g.$xxxlFontSize;
+        padding: 25px 0 2px 3px;
+      }
+      p {
+        &:last-child {
+          font-size: g.$lFontSize;
+          line-height: 1.7;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@use "../global" as g;
+
+#wrap {
+  div#about {
+    h1 {
+      font-family: g.$titleFont;
+      font-size: g.$xxxlFontSize;
+      padding: 25px 0 5px 3px; 
+    }
+    > div {
+      display: flex;
+      @include g.mediaQuery(sp) {
+        display: block;
+      }
+      > p {
+        padding-right: 3%;
+        padding-bottom: 2%;
+        width: 47%;
+        @include g.mediaQuery(sp) {
+          padding-right: 0;
+          width: 100%;
+        }
+      }
+      > div {
+        line-height: 1.7;
+        width: 50%;
+        @include g.mediaQuery(sp) {
+          width: 100%;
+        }
+        h2 {
+          font-weight: bold;
+        }
+        p {
+          padding-bottom: 2%;
+        }
+      }
+    }
+  }
+}

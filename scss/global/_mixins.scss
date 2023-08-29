@@ -1,0 +1,8 @@
+@use "./variables" as v;
+
+// break point
+@mixin mediaQuery($bp) {
+  @media #{map-get(v.$breakPoint, $bp)} {
+    @content;
+  }
+} 

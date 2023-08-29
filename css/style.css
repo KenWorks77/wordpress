@@ -1,0 +1,381 @@
+@charset "UTF-8";
+html {
+  font-size: 14px;
+  /* height: 100%; */
+}
+
+body {
+  background-color: #e6e6e6;
+  color: #444;
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
+  width: 100%;
+}
+
+header div {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+@media screen and (max-width: 550px) {
+  header div {
+    display: block;
+  }
+}
+@media screen and (max-width: 375px) {
+  header div {
+    text-align: center;
+  }
+}
+header div h1 {
+  font-family: "Racing Sans One", cursive;
+  font-size: 2.8rem;
+}
+@media screen and (max-width: 375px) {
+  header div h1 {
+    font-size: 2rem;
+  }
+}
+header div p {
+  color: #757575;
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 375px) {
+  header div p {
+    font-size: 0.8rem;
+  }
+}
+header #head_img {
+  padding: 3px 0 25px 0;
+}
+
+nav#head-navi {
+  border-bottom: 1px dotted #ccc;
+  border-top: 1px dotted #ccc;
+}
+nav#head-navi ul {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+nav#head-navi ul li a {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  color: #444;
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px;
+}
+nav#head-navi ul li a.current {
+  font-weight: bold;
+  color: #21759b;
+}
+nav#head-navi ul li a:hover {
+  background-color: #e6e6e6;
+  border-left: 1px dotted #ccc;
+  border-right: 1px dotted #ccc;
+}
+
+#wrap {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+  margin: 0 auto 20px auto;
+  padding: 0.4vw 3.4vw 1.5vw 3.4vw;
+  width: 100%;
+}
+@media screen and (min-width: 1000px) {
+  #wrap {
+    max-width: 1000px;
+    padding: 5px 35px 15px 35px;
+  }
+}
+@media screen and (max-width: 375px) {
+  #wrap {
+    padding: 3px 15px 10px 15px;
+  }
+}
+
+#wrap p#home-notice {
+  font-family: "Racing Sans One", cursive;
+  font-size: 1.15rem;
+  padding: 20px 0 5px 0;
+}
+#wrap div#home-latest h1 {
+  font-size: 1.4rem;
+  padding-top: 10px;
+}
+#wrap div#home-latest > p {
+  line-height: 1.7;
+}
+#wrap div#home-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 375px) {
+  #wrap div#home-div {
+    display: block;
+  }
+}
+#wrap div#home-div > div {
+  width: 50%;
+  padding: 0 10px;
+}
+@media screen and (max-width: 375px) {
+  #wrap div#home-div > div {
+    width: 100%;
+  }
+}
+#wrap div#home-div > div h1.home-h1 {
+  font-family: "Racing Sans One", cursive;
+  font-size: 2rem;
+  padding: 25px 0 2px 3px;
+}
+#wrap div#home-div > div p:last-child {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  padding-top: 5px;
+}
+
+#wrap div#about h1 {
+  font-family: "Racing Sans One", cursive;
+  font-size: 2rem;
+  padding: 25px 0 5px 3px;
+}
+#wrap div#about > div {
+  display: flex;
+}
+@media screen and (max-width: 375px) {
+  #wrap div#about > div {
+    display: block;
+  }
+}
+#wrap div#about > div > p {
+  padding-right: 3%;
+  padding-bottom: 2%;
+  width: 47%;
+}
+@media screen and (max-width: 375px) {
+  #wrap div#about > div > p {
+    padding-right: 0;
+    width: 100%;
+  }
+}
+#wrap div#about > div > div {
+  line-height: 1.7;
+  width: 50%;
+}
+@media screen and (max-width: 375px) {
+  #wrap div#about > div > div {
+    width: 100%;
+  }
+}
+#wrap div#about > div > div h2 {
+  font-weight: bold;
+}
+#wrap div#about > div > div p {
+  padding-bottom: 2%;
+}
+
+div#contact {
+  margin: 0 auto;
+  padding: 0 0 20px 0;
+  width: 70%;
+}
+div#contact h1 {
+  font-family: "Racing Sans One", cursive;
+  font-size: 2rem;
+  padding: 25px 0 10px 0;
+}
+div#contact ul {
+  padding-bottom: 20px;
+}
+div#contact ul li input:not([type=submit]) {
+  width: 100%;
+}
+div#contact ul li span.mwform-tel-field input {
+  width: 20%;
+}
+div#contact ul li textarea {
+  resize: none;
+  width: 100%;
+}
+div#contact ul li span.error {
+  display: inline;
+}
+div#contact p.complete {
+  line-height: 1.7;
+}
+
+footer {
+  align-items: baseline;
+  display: flex;
+  border-top: 3px double #ccc;
+  margin-top: 5px;
+  padding-top: 15px;
+}
+footer h1 {
+  font-family: "Racing Sans One", cursive;
+  font-size: 1.4rem;
+}
+
+#scroll-top {
+  padding-top: 30px;
+  text-align: right;
+}
+
+a {
+  color: #21759b;
+  text-decoration: underline;
+}
+a:hover {
+  color: #444;
+}
+a.ci {
+  color: #444;
+  text-decoration: none;
+}
+a.ci:hover {
+  color: #21759b;
+}
+a.title {
+  color: #21759b;
+  text-decoration: none;
+}
+a.title:hover {
+  color: #444;
+}
+
+img {
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: bottom;
+  width: auto;
+}
+
+button, input, textarea {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 5px 0 10px 0;
+  padding: 10px;
+}
+
+input[type=submit] {
+  background-color: #21759b;
+  color: #fff;
+}
+input[type=submit]:hover {
+  background-color: #e6e6e6;
+  color: #444;
+}
+
+button[type=submit]:hover {
+  background-color: #e6e6e6;
+}
+
+.new-text {
+  color: #f00;
+  font-size: 0.9rem;
+}
+
+.fade-in {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(0, 20px);
+  transform: translate(0, 20px);
+  -webkit-transition: 0.5s all ease-in;
+  transition: 0.5s all ease-in;
+}
+.fade-in.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.adjust-img {
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+.adjust-img img {
+  max-width: none;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#wrap h1#c-archive-h1 {
+  font-family: "Racing Sans One", cursive;
+  font-size: 2rem;
+  padding: 25px 0 2px 10px;
+}
+#wrap div#c-archive-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 375px) {
+  #wrap div#c-archive-div {
+    display: block;
+  }
+}
+#wrap div#c-archive-div > div {
+  width: 50%;
+  padding: 0 10px 20px 7px;
+}
+@media screen and (max-width: 375px) {
+  #wrap div#c-archive-div > div {
+    width: 100%;
+  }
+}
+#wrap div#c-archive-div > div h2 {
+  font-size: 1.4rem;
+  padding-top: 7px;
+}
+#wrap div#c-archive-div > div p:last-child {
+  line-height: 1.7;
+}
+
+#wrap h1.c-single-h1 {
+  color: #21759b;
+  font-size: 1.7rem;
+  padding: 25px 0 0 0;
+}
+#wrap > p {
+  line-height: 1.7;
+  padding: 0 0 10px 0;
+}
+#wrap figure.wp-block-image,
+#wrap figure.wp-block-embed {
+  padding: 10px 0;
+}
+#wrap nav#bottom-navi ul {
+  display: flex;
+  margin-top: 10px;
+}
+#wrap nav#bottom-navi ul li {
+  width: 33.3%;
+}
+#wrap nav#bottom-navi ul li:nth-child(2) {
+  text-align: center;
+}
+#wrap nav#bottom-navi ul li:nth-child(3) {
+  text-align: right;
+}
+#wrap h2.swiper-h2 {
+  border-top: 1px dotted #ccc;
+  font-family: "Racing Sans One", cursive;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  padding: 25px 0 0 1px;
+}
+#wrap div.swiper {
+  margin: 2px 0 30px 0;
+}
+#wrap div.swiper h3 {
+  margin: 5px 5px 0 5px;
+}
+/*# sourceMappingURL=style.css.map */
