@@ -34,6 +34,7 @@ header {
       font-size: g.$sFontSize;
       @include g.mediaQuery(sp) {
         font-size: g.$xsFontSize;
+        margin-right: 3px;
       }
     }
   }

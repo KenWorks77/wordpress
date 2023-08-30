@@ -43,6 +43,7 @@ header div p {
 @media screen and (max-width: 375px) {
   header div p {
     font-size: 0.8rem;
+    margin-right: 3px;
   }
 }
 header #head_img {
@@ -139,7 +140,7 @@ nav#head-navi ul li a:hover {
 #wrap div#about h1 {
   font-family: "Racing Sans One", cursive;
   font-size: 2rem;
-  padding: 25px 0 5px 3px;
+  padding: 15px 0 5px 3px;
 }
 #wrap div#about > div {
   display: flex;
@@ -181,10 +182,20 @@ div#contact {
   padding: 0 0 20px 0;
   width: 70%;
 }
+@media screen and (max-width: 550px) {
+  div#contact {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 375px) {
+  div#contact {
+    width: 90%;
+  }
+}
 div#contact h1 {
   font-family: "Racing Sans One", cursive;
   font-size: 2rem;
-  padding: 25px 0 10px 0;
+  padding: 15px 0 10px 0;
 }
 div#contact ul {
   padding-bottom: 20px;
@@ -311,7 +322,7 @@ button[type=submit]:hover {
 #wrap h1#c-archive-h1 {
   font-family: "Racing Sans One", cursive;
   font-size: 2rem;
-  padding: 25px 0 2px 10px;
+  padding: 15px 0 2px 10px;
 }
 #wrap div#c-archive-div {
   display: flex;
@@ -332,7 +343,7 @@ button[type=submit]:hover {
   }
 }
 #wrap div#c-archive-div > div h2 {
-  font-size: 1.4rem;
+  font-size: 1.15rem;
   padding-top: 7px;
 }
 #wrap div#c-archive-div > div p:last-child {
@@ -342,6 +353,7 @@ button[type=submit]:hover {
 #wrap h1.c-single-h1 {
   color: #21759b;
   font-size: 1.7rem;
+  margin-bottom: -5px;
   padding: 25px 0 0 0;
 }
 #wrap > p {

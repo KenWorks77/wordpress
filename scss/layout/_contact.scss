@@ -4,10 +4,16 @@ div#contact {
   margin: 0 auto;
   padding: 0 0 20px 0;
   width: 70%;
+  @include g.mediaQuery(tb) {
+    width: 80%;
+  }
+  @include g.mediaQuery(sp) {
+    width: 90%;
+  }
   h1 {
     font-family: g.$titleFont;
     font-size: g.$xxxlFontSize;
-    padding: 25px 0 10px 0; 
+    padding: 15px 0 10px 0; 
   }
   ul {
     padding-bottom: 20px;
