@@ -16,4 +16,16 @@
   <?php
       endwhile;
     endif; ?>
+  <div id="pagination" class="fade-in">
+    <?php the_posts_pagination(
+      array(
+          'mid_size'      => 2,
+          'prev_next'     => true,
+          'prev_text'     => __( '« Prev', 'textdomain' ),
+          'next_text'     => __( 'Next »', 'textdomain' ),
+          'type'          => 'list',
+          'screen_reader_text' => 'Pagination',
+      )
+    ); ?>
+  </div>
 </div>

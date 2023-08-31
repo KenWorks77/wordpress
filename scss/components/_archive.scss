@@ -12,9 +12,31 @@
     @include g.mediaQuery(sp) {
       display: block;
     }
-  > div {
+    > div {
       width: 50%;
       padding: 0 10px 20px 7px;
+      &#pagination {
+        width: 100%;
+        ul.page-numbers {
+          display: flex;
+          justify-content: center;
+          a.page-numbers,
+          span.page-numbers {
+            border-radius: 3px;
+            display: block;
+            margin: 0 2px;
+            padding: 10px 15px;
+            border: 1px solid g.$formColor;
+            &.prev,
+            &.next,
+            &.none {
+              border: none;
+              padding: 10px 5px;
+              margin: 0;
+            }
+          }
+        }
+      }
       @include g.mediaQuery(sp) {
         width: 100%;
       }
@@ -27,4 +49,5 @@
       }
     }
   }
+
 }

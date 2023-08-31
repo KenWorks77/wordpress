@@ -337,6 +337,29 @@ button[type=submit]:hover {
   width: 50%;
   padding: 0 10px 20px 7px;
 }
+#wrap div#c-archive-div > div#pagination {
+  width: 100%;
+}
+#wrap div#c-archive-div > div#pagination ul.page-numbers {
+  display: flex;
+  justify-content: center;
+}
+#wrap div#c-archive-div > div#pagination ul.page-numbers a.page-numbers,
+#wrap div#c-archive-div > div#pagination ul.page-numbers span.page-numbers {
+  border-radius: 3px;
+  display: block;
+  margin: 0 2px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+}
+#wrap div#c-archive-div > div#pagination ul.page-numbers a.page-numbers.prev, #wrap div#c-archive-div > div#pagination ul.page-numbers a.page-numbers.next, #wrap div#c-archive-div > div#pagination ul.page-numbers a.page-numbers.none,
+#wrap div#c-archive-div > div#pagination ul.page-numbers span.page-numbers.prev,
+#wrap div#c-archive-div > div#pagination ul.page-numbers span.page-numbers.next,
+#wrap div#c-archive-div > div#pagination ul.page-numbers span.page-numbers.none {
+  border: none;
+  padding: 10px 5px;
+  margin: 0;
+}
 @media screen and (max-width: 375px) {
   #wrap div#c-archive-div > div {
     width: 100%;

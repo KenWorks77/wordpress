@@ -55,3 +55,20 @@ scrollTop.addEventListener('click', () => {
     behavior: "smooth"
   });
 });
+
+// pagination
+const pagination = document.querySelector('ul.page-numbers');
+if (pagination) {
+  let firstLi = pagination.firstElementChild.firstChild.className;
+  let lastLi = pagination.lastElementChild.firstChild.className;
+  if (firstLi.indexOf('prev') == -1) {
+    let prevNode = document.createElement('li');
+    prevNode.innerHTML = '<span class="page-numbers none">« Prev</span>';
+    pagination.prepend(prevNode);
+  }
+  if (lastLi.indexOf('next') == -1) {
+    let nextNode = document.createElement('li');
+    nextNode.innerHTML = '<span class="page-numbers none">Next »</span>';
+    pagination.append(nextNode);
+  }
+}
