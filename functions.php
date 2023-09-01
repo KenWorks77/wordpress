@@ -22,6 +22,10 @@ function validation_rule($validation, $data, $Data) {
 }
 add_filter('mwform_validation_mw-wp-form-19', 'validation_rule', 10, 3);
 
+// add title tag for each page
+add_theme_support( 'title-tag' );
+
+
 //   ピックアップ画像追加（不要？）
   // function add_thumbnails () { 
   //   add_theme_support('post-thumbnails');
