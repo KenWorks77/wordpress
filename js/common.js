@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   currentWindow = window.innerWidth;
   resizeWindow = currentWindow;
   getImgSize();
+  selectRedirect();
 });
 // onResize
 window.addEventListener('resize', () => {
@@ -71,4 +72,13 @@ if (pagination) {
     nextNode.innerHTML = '<span class="page-numbers none">Next »</span>';
     pagination.append(nextNode);
   }
+}
+
+// selectRedirect
+function selectRedirect () {
+  const selectBox = document.querySelector('#selectbox');
+  selectBox.addEventListener('change', (event) => {
+    let value = event.target.value;
+    if (value !== '') {location.href = value;}
+  });
 }
