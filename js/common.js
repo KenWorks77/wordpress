@@ -77,8 +77,10 @@ if (pagination) {
 // selectRedirect
 function selectRedirect () {
   const selectBox = document.querySelector('#selectbox');
-  selectBox.addEventListener('change', (event) => {
-    let value = event.target.value;
-    if (value !== '') {location.href = value;}
-  });
+  if (selectBox) {
+    selectBox.addEventListener('change', (event) => {
+      let value = event.target.value;
+      if (value !== '') {location.href = value;}
+    });
+  }
 }
