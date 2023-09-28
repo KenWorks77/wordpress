@@ -14,14 +14,16 @@
       'hide_empty' => false, // 空のtermも表示する
     ));
     if (!empty($terms)) :
+      $name = get_post_type_object(get_post_type())->name;
       echo '<select id="selectbox" class="fade-in">';
-      echo '<option value="">Filter ' . get_post_type_object(get_post_type())->label . '▼</option>';
+      // echo '<option value="">Filter ' . get_post_type_object(get_post_type())->label . '▼</option>';
+      echo '<option value="' . esc_url(home_url($name)) . '">- index▼</option>';
       foreach ($terms as $term) :
         $archive_strpos = strpos($term->taxonomy, $taxonomy->name); // archive-***.php向け
         $taxonomy_strpos = strpos($term->taxonomy, $taxonomy->taxonomy); // taxonomy.php向け
         if ($archive_strpos !== false || $taxonomy_strpos !== false) :
           $term_link = get_term_link($term); ?>
-          <option value="<?php echo esc_url($term_link)?>"<?php if ($term->slug === $taxonomy->slug) {echo ' selected';} ?>><?php echo $term->name ?></option>
+          <option value="<?php echo esc_url($term_link)?>"<?php if ($term->slug === $taxonomy->slug) {echo ' selected';} ?>>- <?php echo $term->name ?>▼</option>
   <?php 
         endif;
       endforeach;

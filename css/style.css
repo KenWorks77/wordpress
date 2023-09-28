@@ -320,8 +320,8 @@ button[type=submit]:hover {
 }
 
 #wrap div#c-archive-title {
+  align-items: baseline;
   display: flex;
-  justify-content: space-between;
 }
 #wrap div#c-archive-title h1#c-archive-h1 {
   font-family: "Racing Sans One", cursive;
@@ -329,11 +329,9 @@ button[type=submit]:hover {
   padding: 15px 0 2px 10px;
 }
 #wrap div#c-archive-title select {
-  border-radius: 3px;
-  border: 1px solid #ccc;
   cursor: pointer;
-  margin: 15px 10px 5px 0;
-  padding: 5px 5px;
+  padding-left: 5px;
+  font-size: 1.15rem;
 }
 #wrap div#c-archive-title select option {
   margin: 0 5px;
