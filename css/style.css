@@ -234,6 +234,10 @@ footer h1 {
   text-align: right;
 }
 
+.breadcrumb-area {
+  padding: 10px 0 0 0;
+}
+
 a {
   color: #21759b;
   text-decoration: underline;
@@ -389,6 +393,10 @@ button[type=submit]:hover {
 }
 #wrap div#c-archive-div > div p:last-child {
   line-height: 1.7;
+}
+#wrap .search-form input,
+#wrap .search-form button {
+  padding: 5px;
 }
 
 #wrap h1.c-single-h1 {

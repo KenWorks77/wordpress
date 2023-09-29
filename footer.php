@@ -1,3 +1,12 @@
+    <?php if( !(is_home() || is_front_page() )): ?>
+      <div class="breadcrumb-area fade-in">
+        <?php
+          if ( function_exists('bcn_display') ) {
+            bcn_display();
+          }
+        ?>
+      </div>
+    <?php endif; ?>
     <div id="scroll-top" class="fade-in"><a href="javascript:;">↑ Scroll to Top</a></div>
     <footer class="fade-in">
       <h1><a href="<?php echo home_url(); ?>" class="ci">KenWorks77</a></h1>
