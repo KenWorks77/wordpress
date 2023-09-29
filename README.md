@@ -3,25 +3,26 @@ KenWorks77 website renewal work with WordPress and PHP.
 https://kenworks77.sakura.ne.jp/wp/
 
 index.php  
-archive-aviation.php  
-archive-hana.php  
-archive-motorcycle.php  
-archive-travel.php  
-c-arc-detail.php  
-c-sin-detail.php  
-footer.php  
-functions.php  
-header.php  
-page-about.php  
-page-complete.php  
-page-contact.php  
-page.php  
-single-aviation.php  
-single-hana.php  
-single-motorcycle.php  
-single-travel.php  
-404.php  
-style.css  
+archive-aviation.php
+archive-hana.php
+archive-motorcycle.php
+archive-travel.php
+c-arc-detail.php
+c-sin-detail.php
+footer.php
+functions.php
+header.php
+page-about.php
+page-complete.php
+page-contact.php
+page.php
+search.php
+single-aviation.php
+single-hana.php
+single-motorcycle.php
+single-travel.php
+404.php
+style.css
 - js
   - common.js
   - smoothscroll.js
