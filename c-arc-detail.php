@@ -61,3 +61,10 @@
     ); ?>
   </div>
 </div>
+
+<!-- カスタム投稿ページ内検索 -->
+<form action="<?php echo home_url(); ?>" method="get" class="fade-in">
+  <input type="text" name="s" value="<?php the_search_query(); ?>" placeholder="Search <?php echo esc_html(get_post_type_object(get_post_type())->label); ?>">
+  <input type="hidden" name="post_type" value="<?php echo esc_html(get_post_type_object(get_post_type())->name); ?>">
+  <button>Search</button>
+</form>
