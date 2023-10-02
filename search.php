@@ -1,11 +1,13 @@
 <?php get_header(); ?>
 <div id="c-archive-title">
-  <h1 id="c-archive-h1" class="fade-in"><?php echo get_post_type_object(get_post_type())->label ?></h1>
+  <?php if(have_posts()): ?>
+    <h1 id="c-archive-h1" class="fade-in"><?php echo get_post_type_object(get_post_type())->label ?></h1>
+  <?php endif; ?>
   <div class="search-result fade-in">
-  <?php if( have_posts() ): ?>
+  <?php if(have_posts()): ?>
     <p>- Search results : <span><?php the_search_query(); ?></span></p>
   <?php else: ?>
-    <p>No results : <span><?php the_search_query(); ?></span></p>
+    <p class="no-results">No results : <span><?php the_search_query(); ?></span></p>
   <?php endif; ?>
 </div>
 </div>

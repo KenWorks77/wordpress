@@ -11,10 +11,15 @@ footer {
     font-size: g.$xlFontSize;
   }
 }
-#scroll-top {
+
+div#bottom-area {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   padding-top: 30px;
-  text-align: right;
-}
-.breadcrumb-area {
-  padding: 10px 0 0 0;
+  #scroll-top {
+    padding-left: 10px;
+    white-space: nowrap;
+  }
 }

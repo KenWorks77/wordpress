@@ -19,8 +19,9 @@
     }
     .search-result {
       padding-left: 5px;
-      span {
-        font-weight: bold;
+      p {
+        &.no-results {padding: 50px 0 10px 10px;}
+        span {font-weight: bold;}
       }
     }
   }
