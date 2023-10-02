@@ -8,7 +8,9 @@ archive-hana.php
 archive-motorcycle.php  
 archive-travel.php  
 c-arc-detail.php  
+c-arc-select.php  
 c-sin-detail.php  
+c-tax-select.php  
 footer.php  
 functions.php  
 header.php  

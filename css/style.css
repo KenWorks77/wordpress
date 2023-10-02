@@ -334,7 +334,7 @@ button[type=submit]:hover {
 }
 #wrap div#c-archive-title select {
   cursor: pointer;
-  padding-left: 5px;
+  margin-left: 5px;
   font-size: 1.15rem;
 }
 #wrap div#c-archive-title select option {
