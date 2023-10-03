@@ -32,19 +32,21 @@
       if ($custom_query->have_posts()) :
         while ($custom_query->have_posts()) :
           $custom_query->the_post();
-          // アイキャッチ画像を表示
+          // アイキャッチ画像指定が無ければ投稿内最初の画像を表示
           if (has_post_thumbnail()) :
-            $thumbnail_url = get_the_post_thumbnail_url();
-            // スライダーに現在表示中のslugを含めない
-            if (!strstr(get_permalink(), $slug)) :?>
-              <div class="swiper-slide">
-                <div>
-                  <p class="adjust-img"><a href="<?php echo esc_url(get_permalink()); ?>"><img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php echo esc_attr(get_the_title()); ?>"></a></p>
-                  <h3><a href="<?php esc_url(get_permalink()); ?>" class="title"><?php echo esc_attr(get_the_title()); ?></a></h3>
-                </div>
+            $image_url = get_the_post_thumbnail_url();
+          else :
+            $image_url = first_image();
+          endif;
+          // スライダーに現在表示中のslugを含めない
+          if (!strstr(get_permalink(), $slug)) :?>
+            <div class="swiper-slide">
+              <div>
+                <p class="adjust-img"><a href="<?php echo esc_url(get_permalink()); ?>"><img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr(get_the_title()); ?>"></a></p>
+                <h3><a href="<?php esc_url(get_permalink()); ?>" class="title"><?php echo esc_attr(get_the_title()); ?></a></h3>
               </div>
+            </div>
     <?php
-            endif;
           endif;
         endwhile;
         wp_reset_postdata(); // ループのリセット
