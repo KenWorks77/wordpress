@@ -71,6 +71,8 @@
   .search-form {
     input,
     button {
+      font-family: system-ui; /* iPhoneでplaceholderが下にズレる対策 */
+      line-height: normal; /* iPhoneでplaceholderが下にズレる対策 */
       padding: 5px;
     }
   }

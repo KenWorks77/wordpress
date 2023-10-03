@@ -402,6 +402,8 @@ button[type=submit]:hover {
 }
 #wrap .search-form input,
 #wrap .search-form button {
+  font-family: system-ui; /* iPhoneでplaceholderが下にズレる対策 */
+  line-height: normal; /* iPhoneでplaceholderが下にズレる対策 */
   padding: 5px;
 }
 
