@@ -17,11 +17,13 @@
       while (have_posts()) : ?>
       <div class="fade-in">
         <?php the_post();
+          // アイキャッチ画像指定が無ければ投稿内最初の画像を表示
           if (has_post_thumbnail()) :
-            echo '<p class="adjust-img"><a href="' . esc_url(get_the_permalink()) . '"><img src="' . esc_url(get_the_post_thumbnail_url()) . '" alt="' . esc_attr(get_the_title()) . '"></a></p>';
+            $image_url = get_the_post_thumbnail_url();
           else :
-            echo '<p>※アイキャッチ画像を指定してください。</p>';
-          endif; ?>
+            $image_url = first_image();
+          endif;
+          echo '<p class="adjust-img"><a href="' . esc_url(get_the_permalink()) . '"><img src="' . esc_url($image_url) . '" alt="' . esc_attr(get_the_title()) . '"></a></p>'; ?>
         <h2><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h2>
         <p><?php echo get_the_excerpt(); ?> <a href="<?php echo esc_url(get_the_permalink()); ?>">Continue reading →</a></>
       </div>

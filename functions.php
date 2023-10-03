@@ -25,12 +25,19 @@ add_filter('mwform_validation_mw-wp-form-19', 'validation_rule', 10, 3);
 // add title tag for each page
 add_theme_support( 'title-tag' );
 
-
-//   ピックアップ画像追加（不要？）
-  // function add_thumbnails () { 
-  //   add_theme_support('post-thumbnails');
-  // } 
-  // add_action('after_setup_theme' , 'add_thumbnails' );
+// get the first image in the post
+function first_image() {
+  global $post, $posts;
+  $first_img = '';
+  ob_start();
+  ob_end_clean();
+  preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+  $first_img = $matches[1][0];
+  if(empty($first_img)){
+    $first_img = 'no image画像のパスをここに指定すること';
+  }
+  return $first_img;
+}
 
   // Custom Post Type UIを使用しなかった場合以下を記述（固定ページの登録も必要） 
   // function add_custom_post_type() {
