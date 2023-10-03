@@ -41,7 +41,7 @@
       if (has_post_thumbnail()) :
         $image_url = get_the_post_thumbnail_url();
       else :
-        $image_url = first_image();
+        $image_url = get_first_image_url();
       endif; ?>
         <p id="home-notice" class="fade-in">The latest post - <?php echo get_post_type_object(get_post_type())->label; ?> <span class="new-text">NEW!</span></p>
         <div id="home-latest">
@@ -71,7 +71,7 @@
           if (has_post_thumbnail()) :
             $image_url = get_the_post_thumbnail_url();
           else :
-            $image_url = first_image();
+            $image_url = get_first_image_url();
           endif;
           $post_type_object = get_post_type_object($post_type); ?>
           <div class="fade-in">

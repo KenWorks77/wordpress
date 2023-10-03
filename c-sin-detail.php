@@ -36,7 +36,7 @@
           if (has_post_thumbnail()) :
             $image_url = get_the_post_thumbnail_url();
           else :
-            $image_url = first_image();
+            $image_url = get_first_image_url();
           endif;
           // スライダーに現在表示中のslugを含めない
           if (!strstr(get_permalink(), $slug)) :?>

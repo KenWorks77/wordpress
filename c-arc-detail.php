@@ -8,7 +8,7 @@
           if (has_post_thumbnail()) :
             $image_url = get_the_post_thumbnail_url();
           else :
-            $image_url = first_image();
+            $image_url = get_first_image_url();
           endif;
           echo '<p class="adjust-img"><a href="' . esc_url(get_the_permalink()) . '"><img src="' . esc_url($image_url) . '" alt="' . esc_attr(get_the_title()) . '"></a></p>'; ?>
         <h2><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h2>

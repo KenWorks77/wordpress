@@ -26,7 +26,7 @@ add_filter('mwform_validation_mw-wp-form-19', 'validation_rule', 10, 3);
 add_theme_support( 'title-tag' );
 
 // get the first image in the post
-function first_image() {
+function get_first_image_url() {
   global $post, $posts;
   $first_img = '';
   ob_start();
