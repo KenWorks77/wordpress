@@ -53,6 +53,12 @@ button[type=submit] {
   color: g.$red;
   font-size: g.$sFontSize;
 }
+.pos-r {
+  position: relative;
+}
+.d-none {
+  display: none;
+}
 .fade-in {
   opacity: 0;
   visibility: hidden;
@@ -77,5 +83,48 @@ button[type=submit] {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+#faves {
+  background-color: g.$white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  margin: 0 0 0 auto;
+  padding: 15px 15px 5px 15px;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  width: calc(#{g.$media-pc} / 2);
+  @include g.mediaQuery(tb) {
+    width: 90vw;
+    top: 40px;
+  }
+  > p:first-child {
+    font-weight: bold;
+  }
+  ul#faves-list {
+    li {
+      display: flex;
+      &.default-li {
+        padding: 20px 0;
+      }
+      a {
+        padding: 5px 0;
+        p {
+          align-items: center;
+          display: flex;
+          img {
+            height: auto;
+            margin-right: 5px;
+            width: 10%;
+            @include g.mediaQuery(tb) {
+              width: 20%;
+            }
+          }
+        }
+      }
+      button {
+        margin: 5px 0;
+      }
+    }
   }
 }
