@@ -1,6 +1,7 @@
 // resize window
 let currentWindow;
 let resizeWindow;
+
 // onLoad
 document.addEventListener('DOMContentLoaded', () => {
   currentWindow = window.innerWidth;
@@ -8,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   getImgSize();
   selectRedirect();
 });
+
 // onResize
 window.addEventListener('resize', () => {
   resizeWindow = window.innerWidth;
@@ -17,6 +19,7 @@ window.addEventListener('resize', () => {
     currentWindow = resizeWindow;
   }
 });
+
 // adjust images
 function getImgSize () {
   let adjustImgs = document.querySelectorAll('.adjust-img');
@@ -32,6 +35,7 @@ const options = {
   rootMargin: "0px 0px", 
   threshold: 0.2
 };
+
 // fadeInTargetが交差するかどうか調べるAPI(Intersection Observer)
 const observer = new IntersectionObserver(doWhenIntersect, options);
 fadeInTarget.forEach((element) => {
