@@ -298,6 +298,13 @@ button[type=submit]:hover {
   background-color: #e6e6e6;
 }
 
+button.add-favorite {
+  font-family: system-ui;
+  line-height: normal;
+  padding: 5px;
+  white-space: nowrap;
+}
+
 .new-text {
   color: #f00;
   font-size: 0.9rem;
@@ -343,7 +350,7 @@ button[type=submit]:hover {
   background-color: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
   margin: 0 0 0 auto;
-  padding: 15px 15px 5px 15px;
+  padding: 15px;
   position: absolute;
   right: 0;
   top: 25px;
@@ -466,11 +473,16 @@ button[type=submit]:hover {
   padding: 5px;
 }
 
-#wrap h1.c-single-h1 {
+#wrap div#c-single-tle {
+  align-items: center;
+  display: flex;
+  margin-bottom: -10px;
+  justify-content: space-between;
+  padding: 25px 0 0 0;
+}
+#wrap div#c-single-tle h1.c-single-h1 {
   color: #21759b;
   font-size: 1.7rem;
-  margin-bottom: -5px;
-  padding: 25px 0 0 0;
 }
 #wrap > p {
   line-height: 1.7;

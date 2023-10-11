@@ -44,26 +44,15 @@
             endforeach; ?>
           <li><a href="<?php echo home_url('about'); ?>"<?php currentSign('about'); ?>>About Us</a></li>
         </ul>
-
-        <!-- お気に入り登録用 -->
-        <?php if (is_single()): ?>
+        <!-- お気に入り表示 -->
+        <?php if (is_single() || is_archive() && !is_search()): ?>
           <div class="pos-r">
             <p id="btn-edit-faves"><a href="javascript:;">Edit Favorites</a></p>
-            <script type="text/javascript">
-              let current_post = {};
-              current_post.slug = '<?php echo $post->post_name ?>';
-              current_post.title = '<?php echo html_entity_decode(get_the_title()) ?>';
-              current_post.url = '<?php echo esc_url(get_permalink()) ?>';
-              current_post.first_img = '<?php echo esc_url(get_first_image_url()) ?>';
-              current_post.thumbnail_img = '<?php echo esc_url(get_the_post_thumbnail_url()) ?>';
-            </script>
             <script src="<?php echo get_template_directory_uri(); ?>/js/favorites-setting.js"></script>
             <div id="faves" class="d-none">
               <p>Edit favorites</p>
               <ul id="faves-list"><li class="default-li">No favorite pages</li></ul>
-              <p><button id="add-favorite">add <strong><?php echo html_entity_decode(get_the_title()) ?></strong> to favorites</button></p>
             </div>
-            <script>favorites();</script>
           </div>
         <?php endif; ?>
       </nav>

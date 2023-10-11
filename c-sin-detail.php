@@ -1,9 +1,18 @@
 <?php
   if (have_posts()):
-    while (have_posts()): ?>
-    <h1 class="c-single-h1 fade-in"><?php the_title(); ?></h1>
-    <?php the_post(); ?>
-    <?php the_content(); ?>
+    while (have_posts()):
+      the_post();
+      // アイキャッチ画像指定が無ければ投稿内最初の画像を表示
+      if (has_post_thumbnail()) :
+        $image_url = get_the_post_thumbnail_url();
+      else :
+        $image_url = get_first_image_url();
+      endif; ?>
+      <div id="c-single-tle">
+        <h1 class="c-single-h1 fade-in"><?php the_title(); ?></h1>
+        <p><button class="add-favorite fade-in" data-slug="<?php echo $post->post_name ?>" data-title="<?php the_title(); ?>" data-url="<?php echo esc_url(get_the_permalink()); ?>" data-img="<?php echo esc_url($image_url); ?>">Add to favorites</button></p>
+      </div>
+      <?php the_content(); ?>
 <?php
     endwhile;
   endif; ?>

@@ -12,7 +12,8 @@
           endif;
           echo '<p class="adjust-img"><a href="' . esc_url(get_the_permalink()) . '"><img src="' . esc_url($image_url) . '" alt="' . esc_attr(get_the_title()) . '"></a></p>'; ?>
         <h2><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h2>
-        <p><?php echo get_the_excerpt(); ?> <a href="<?php echo esc_url(get_the_permalink()); ?>">Continue reading →</a></>
+        <p><?php echo get_the_excerpt(); ?> <a href="<?php echo esc_url(get_the_permalink()); ?>">Continue reading →</a></p>
+        <p><button class="add-favorite" data-slug="<?php echo $post->post_name ?>" data-title="<?php the_title(); ?>" data-url="<?php echo esc_url(get_the_permalink()); ?>" data-img="<?php echo esc_url($image_url); ?>">Add to favorites</button></p>
       </div>
   <?php
       endwhile;

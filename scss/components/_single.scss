@@ -1,11 +1,16 @@
 @use "../global" as g;
 
 #wrap {
-  h1.c-single-h1 {
-    color: g.$mainColor;
-    font-size: g.$xxlFontSize;
-    margin-bottom: -5px;
+  div#c-single-tle {
+    align-items: center;
+    display: flex;
+    margin-bottom: -10px;
+    justify-content: space-between;
     padding: 25px 0 0 0;
+    h1.c-single-h1 {
+      color: g.$mainColor;
+      font-size: g.$xxlFontSize;
+    }
   }
   > p {
     line-height: 1.7;
