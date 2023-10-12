@@ -73,12 +73,12 @@ function addCookieData (showFaves, expirationDate) {
   addBtnArr.forEach((targetBtn) => {
     targetBtn.addEventListener('click', () => {
       let cookieData = {};
-      let current_post = {};
-      current_post.slug = targetBtn.dataset.slug;
-      current_post.title = targetBtn.dataset.title;
-      current_post.url = targetBtn.dataset.url;
-      current_post.img = targetBtn.dataset.img;
-      cookieData[current_post.slug] = current_post;
+      let currentPost = {};
+      currentPost.slug = targetBtn.dataset.slug;
+      currentPost.title = targetBtn.dataset.title;
+      currentPost.url = targetBtn.dataset.url;
+      currentPost.img = targetBtn.dataset.img;
+      cookieData[currentPost.slug] = currentPost;
       if (favePages) {
         cookieData = Object.assign(cookieData, favePages);
       }
