@@ -45,7 +45,7 @@
           <li><a href="<?php echo home_url('about'); ?>"<?php currentSign('about'); ?>>About Us</a></li>
         </ul>
         <!-- お気に入り表示 -->
-        <?php if (is_single() || is_archive() && !is_search()): ?>
+        <?php if (is_home() || is_front_page() || is_archive() || is_single() && !is_search()): ?>
           <div class="pos-r">
             <p id="btn-edit-faves"><a href="javascript:;">Edit Favorites</a></p>
             <script src="<?php echo get_template_directory_uri(); ?>/js/favorites-setting.js"></script>
