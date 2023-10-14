@@ -54,6 +54,12 @@ button.add-favorite {
   line-height: normal;
   padding: 5px;
   white-space: nowrap;
+  &:hover {
+    background-color: g.$bgColor;
+  }
+  &:disabled {
+    background-color: g.$bgColor;
+  }
 }
 .new-text {
   color: g.$red;

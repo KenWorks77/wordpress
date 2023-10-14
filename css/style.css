@@ -304,6 +304,12 @@ button.add-favorite {
   padding: 5px;
   white-space: nowrap;
 }
+button.add-favorite:hover {
+  background-color: #e6e6e6;
+}
+button.add-favorite:disabled {
+  background-color: #e6e6e6;
+}
 
 .new-text {
   color: #f00;
