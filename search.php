@@ -25,7 +25,7 @@
           endif;
           echo '<p class="adjust-img"><a href="' . esc_url(get_the_permalink()) . '"><img src="' . esc_url($image_url) . '" alt="' . esc_attr(get_the_title()) . '"></a></p>'; ?>
         <h2><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h2>
-        <p><?php echo get_the_excerpt(); ?> <a href="<?php echo esc_url(get_the_permalink()); ?>">Continue reading →</a></>
+        <p><?php echo esc_html(get_the_excerpt()); ?> <a href="<?php the_permalink(); ?>">Continue reading →</a></>
       </div>
   <?php
       endwhile;

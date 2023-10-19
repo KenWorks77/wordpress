@@ -43,11 +43,11 @@
       else :
         $image_url = get_first_image_url();
       endif; ?>
-        <p id="home-notice" class="fade-in">The latest post - <?php echo get_post_type_object(get_post_type())->label; ?> <span class="new-text">NEW!</span></p>
+        <p id="home-notice" class="fade-in">The latest post - <?php echo esc_html(get_post_type_object(get_post_type())->label); ?> <span class="new-text">NEW!</span></p>
         <div id="home-latest">
           <p class="fade-in"><a href="<?php echo esc_url(get_permalink()); ?>"><img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr(get_the_title()); ?>"></a></p>
-          <h1 class="fade-in"><a href="<?php echo esc_url(get_permalink()); ?>" class="title"><?php echo esc_attr(get_the_title()); ?></a></h1>
-          <p class="fade-in"><?php echo get_the_excerpt(); ?> <a href="<?php echo esc_url(get_permalink()); ?>">Continue reading →</a></p>
+          <h1 class="fade-in"><a href="<?php echo esc_url(get_permalink()); ?>" class="title"><?php echo esc_html(get_the_title()); ?></a></h1>
+          <p class="fade-in"><?php echo esc_html(get_the_excerpt()); ?> <a href="<?php echo esc_url(get_permalink()); ?>">Continue reading →</a></p>
         </div>
   <?php
       // ループのリセット
@@ -75,8 +75,8 @@
           endif;
           $post_type_object = get_post_type_object($post_type); ?>
           <div class="fade-in">
-            <h1 class="home-h1"><?php echo $post_type_object->label; ?></h1>
-            <p class="adjust-img"><a href="<?php echo esc_url(home_url($post_type_object->name)); ?>"><img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr(get_the_title()); ?>"></a></p>
+            <h1 class="home-h1"><?php echo esc_html($post_type_object->label); ?></h1>
+            <p class="adjust-img"><a href="<?php echo esc_url(home_url($post_type_object->name)); ?>"><img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>"></a></p>
             <p><a href="<?php echo esc_url(home_url($post_type_object->name)); ?>"><?php echo $post_type_object->label; ?> index page →</a></p>
           </div>
     <?php

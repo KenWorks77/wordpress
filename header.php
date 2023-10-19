@@ -15,14 +15,14 @@
     <div id="wrap">
       <header class="fade-in">
         <div>
-          <h1><a href="<?php echo home_url(); ?>" class="ci">KenWorks77</a></h1>
+          <h1><a href="<?php echo esc_url(home_url()); ?>" class="ci">KenWorks77</a></h1>
           <p>Fly Low - Go Fast - Turn Left</p>
         </div>
-        <p id="head_img"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/cropped-travel.jpg" width="930" height="242"></a></p>
+        <p id="head_img"><a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/cropped-travel.jpg" width="930" height="242"></a></p>
       </header>
       <nav id="head-navi" class="fade-in">
         <ul>
-          <li><a href="<?php echo home_url(); ?>"<?php if (is_home() || is_front_page()) {echo ' class="current"';} ?>>Home</a></li>
+          <li><a href="<?php echo esc_url(home_url()); ?>"<?php if (is_home() || is_front_page()) {echo ' class="current"';} ?>>Home</a></li>
           <?php
             // カスタム投稿へのリンクを表示
             $args = array(
@@ -31,7 +31,7 @@
             );
             $post_types = get_post_types($args,'names','and');
             // 現在表示中のリンクをactiveにする
-            function currentSign ($name) {
+            function currentSign($name) {
               $permalink = urldecode(get_permalink());
               if (strstr($permalink, $name)) {
                 echo ' class="current"';
@@ -39,16 +39,16 @@
             }
             foreach ($post_types as $post_type) :
               $object = get_post_type_object($post_type); ?>
-          <li><a href="<?php echo home_url($object->name); ?>"<?php currentSign($object->name); ?>><?php echo $object->label; ?></a></li>
+          <li><a href="<?php echo esc_url(home_url($object->name)); ?>"<?php currentSign($object->name); ?>><?php echo esc_html($object->label); ?></a></li>
           <?php
             endforeach; ?>
-          <li><a href="<?php echo home_url('about'); ?>"<?php currentSign('about'); ?>>About Us</a></li>
+          <li><a href="<?php echo esc_url(home_url('about')); ?>"<?php currentSign('about'); ?>>About Us</a></li>
         </ul>
         <!-- お気に入り表示 -->
         <?php if (is_home() || is_front_page() || is_archive() || is_single() && !is_search()): ?>
           <div class="pos-r">
             <p id="btn-edit-faves"><a href="javascript:;">Edit Favorites</a></p>
-            <script src="<?php echo get_template_directory_uri(); ?>/js/favorites-setting.js"></script>
+            <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/favorites-setting.js"></script>
             <div id="faves" class="d-none">
               <p>Edit favorites</p>
               <ul id="faves-list"><li class="default-li">No favorite pages</li></ul>

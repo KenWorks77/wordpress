@@ -1,5 +1,5 @@
 <div id="c-archive-title">
-  <h1 id="c-archive-h1" class="fade-in"><?php echo get_post_type_object(get_post_type())->label ?></h1>
+  <h1 id="c-archive-h1" class="fade-in"><?php echo esc_html(get_post_type_object(get_post_type())->label); ?></h1>
   <?php // タクソノミ表示
     $current_object = get_queried_object(); // 現在リクエストされているクエリの情報オブジェクトを取得
     $custom_post_ids = get_posts(array(
@@ -15,12 +15,12 @@
     if (!empty($terms)) :
       $name = get_post_type_object(get_post_type())->name;
       echo '<select id="selectbox" class="fade-in">';
-      echo '<option value="' . esc_url(home_url($name)) . '">- index▼</option>';
+      echo '<option value="' . esc_attr(home_url($name)) . '">- index▼</option>';
       foreach ($terms as $term) :
         $archive_strpos = strpos($term->taxonomy, $current_object->name);
         if ($archive_strpos !== false) :
           $term_link = get_term_link($term); ?>
-          <option value="<?php echo esc_url($term_link)?>">- <?php echo $term->name ?>▼</option>
+          <option value="<?php echo esc_attr($term_link); ?>">- <?php echo esc_html($term->name); ?>▼</option>
   <?php 
         endif;
       endforeach;

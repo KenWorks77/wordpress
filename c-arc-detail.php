@@ -12,8 +12,8 @@
           endif;
           echo '<p class="adjust-img"><a href="' . esc_url(get_the_permalink()) . '"><img src="' . esc_url($image_url) . '" alt="' . esc_attr(get_the_title()) . '"></a></p>'; ?>
         <h2><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h2>
-        <p><?php echo get_the_excerpt(); ?> <a href="<?php echo esc_url(get_the_permalink()); ?>">Continue reading →</a></p>
-        <p><button class="add-favorite" data-slug="<?php echo $post->post_name ?>" data-title="<?php the_title(); ?>" data-url="<?php echo esc_url(get_the_permalink()); ?>" data-img="<?php echo esc_url($image_url); ?>">Add to favorites</button></p>
+        <p><?php echo esc_html(get_the_excerpt()); ?> <a href="<?php the_permalink(); ?>">Continue reading →</a></p>
+        <p><button class="add-favorite" data-slug="<?php echo esc_attr($post->post_name); ?>" data-title="<?php the_title(); ?>" data-url="<?php the_permalink(); ?>" data-img="<?php echo esc_attr($image_url); ?>">Add to favorites</button></p>
       </div>
   <?php
       endwhile;
@@ -34,9 +34,9 @@
 
 <!-- カスタム投稿ページ内検索 -->
 <div class="search-form">
-  <form action="<?php echo home_url(); ?>" method="get" class="fade-in">
-    <input type="text" name="s" value="<?php the_search_query(); ?>" placeholder="Search <?php echo esc_html(get_post_type_object(get_post_type())->label); ?>">
-    <input type="hidden" name="post_type" value="<?php echo esc_html(get_post_type_object(get_post_type())->name); ?>">
+  <form action="<?php echo esc_url(home_url()); ?>" method="get" class="fade-in">
+    <input type="text" name="s" value="<?php the_search_query(); ?>" placeholder="Search <?php echo esc_attr(get_post_type_object(get_post_type())->label); ?>">
+    <input type="hidden" name="post_type" value="<?php echo esc_attr(get_post_type_object(get_post_type())->name); ?>">
     <button type="submit">Search</button>
   </form>
 </div>

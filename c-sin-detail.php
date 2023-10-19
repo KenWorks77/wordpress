@@ -10,7 +10,7 @@
       endif; ?>
       <div id="c-single-tle">
         <h1 class="c-single-h1 fade-in"><?php the_title(); ?></h1>
-        <p><button class="add-favorite fade-in" data-slug="<?php echo $post->post_name ?>" data-title="<?php the_title(); ?>" data-url="<?php echo esc_url(get_the_permalink()); ?>" data-img="<?php echo esc_url($image_url); ?>">Add to favorites</button></p>
+        <p><button class="add-favorite fade-in" data-slug="<?php echo esc_attr($post->post_name); ?>" data-title="<?php the_title(); ?>" data-url="<?php the_permalink(); ?>" data-img="<?php echo esc_attr($image_url); ?>">Add to favorites</button></p>
       </div>
       <?php the_content(); ?>
 <?php
@@ -19,7 +19,7 @@
 <nav id="bottom-navi" class="fade-in">
   <ul>
     <li><?php previous_post_link(); ?></li>
-    <li><a href="<?php echo home_url(get_post_type_object(get_post_type())->name); ?>"><?php echo get_post_type_object(get_post_type())->label; ?>-index</a></li>
+    <li><a href="<?php echo esc_url(home_url(get_post_type_object(get_post_type())->name)); ?>"><?php echo esc_html(get_post_type_object(get_post_type())->label); ?>-index</a></li>
     <li><?php next_post_link(); ?></li>
   </ul>
 </nav>
@@ -28,7 +28,7 @@
   // Swiperスライダー
   // 親カテゴリーのslugを取得
   $parentSlug = get_post($post->post_parent)->post_type; ?>
-<h2 class="swiper-h2 fade-in">Other <?php echo get_post_type_object(get_post_type())->label; ?> posts</h2>
+<h2 class="swiper-h2 fade-in">Other <?php echo esc_html(get_post_type_object(get_post_type())->label); ?> posts</h2>
 <div class="swiper fade-in">
   <div class="swiper-wrapper">
     <?php
@@ -52,7 +52,7 @@
             <div class="swiper-slide">
               <div>
                 <p class="adjust-img"><a href="<?php echo esc_url(get_permalink()); ?>"><img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr(get_the_title()); ?>"></a></p>
-                <h3><a href="<?php esc_url(get_permalink()); ?>" class="title"><?php echo esc_attr(get_the_title()); ?></a></h3>
+                <h3><a href="<?php esc_url(get_permalink()); ?>" class="title"><?php echo esc_html(get_the_title()); ?></a></h3>
               </div>
             </div>
     <?php
@@ -69,4 +69,4 @@
   <div class="swiper-pagination"></div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/swiper-setting.js"></script>
+<script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/swiper-setting.js"></script>
