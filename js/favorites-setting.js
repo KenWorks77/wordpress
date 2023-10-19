@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // cookieを取得してjson形式に変換 → 結果をfavePagesに格納
-function getCookieData (showFaves, expirationDate, addBtnArr) {
+function getCookieData(showFaves, expirationDate, addBtnArr) {
   let cookieArr = decodeURI(document.cookie).split('; ');
   let faves = cookieArr.filter((value) => {
     return value.includes('fave-pages');
@@ -27,7 +27,7 @@ function getCookieData (showFaves, expirationDate, addBtnArr) {
 }
 
 // edit favorites button
-function editFavesBtn (showFaves, expirationDate, addBtnArr) {
+function editFavesBtn(showFaves, expirationDate, addBtnArr) {
   document.getElementById('btn-edit-faves').addEventListener('click', () => {
     if (showFaves.classList.contains('d-none')) {
       showFaves.classList.remove('d-none');
@@ -39,7 +39,7 @@ function editFavesBtn (showFaves, expirationDate, addBtnArr) {
 }
 
 // list表示
-function displayFaves (showFaves, expirationDate, addBtnArr) {
+function displayFaves(showFaves, expirationDate, addBtnArr) {
   const ul = document.getElementById('faves-list');
   if (Object.keys(favePages).length) {
     let keys = Object.keys(favePages);
@@ -54,7 +54,7 @@ function displayFaves (showFaves, expirationDate, addBtnArr) {
 }
 
 // 削除ボタンを押して該当pageを削除
-function removeCookieData (showFaves, expirationDate, addBtnArr) {
+function removeCookieData(showFaves, expirationDate, addBtnArr) {
   let removeBtns = document.querySelectorAll('.remove');
   removeBtns.forEach((button) => {
     button.addEventListener('click', () => {
@@ -69,7 +69,7 @@ function removeCookieData (showFaves, expirationDate, addBtnArr) {
 }
 
 // 追加ボタンを押してcookie登録
-function addCookieData (showFaves, expirationDate, addBtnArr) {
+function addCookieData(showFaves, expirationDate, addBtnArr) {
   addBtnArr.forEach((targetBtn) => {
     targetBtn.addEventListener('click', () => {
       let cookieData = {};

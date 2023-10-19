@@ -21,7 +21,7 @@ window.addEventListener('resize', () => {
 });
 
 // adjust images
-function getImgSize () {
+function getImgSize() {
   let adjustImgs = document.querySelectorAll('.adjust-img');
   adjustImgs.forEach((target) => {
     target.style.height = Math.trunc(target.clientWidth * 0.75) + 'px';
@@ -79,7 +79,7 @@ if (pagination) {
 }
 
 // selectRedirect
-function selectRedirect () {
+function selectRedirect() {
   const selectBox = document.querySelector('#selectbox');
   if (selectBox) {
     selectBox.addEventListener('change', (event) => {
