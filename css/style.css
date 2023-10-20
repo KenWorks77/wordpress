@@ -482,13 +482,21 @@ button.add-favorite:disabled {
 #wrap div#c-single-tle {
   align-items: center;
   display: flex;
-  margin-bottom: -10px;
   justify-content: space-between;
   padding: 25px 0 0 0;
 }
 #wrap div#c-single-tle h1.c-single-h1 {
   color: #21759b;
   font-size: 1.7rem;
+}
+@media screen and (max-width: 375px) {
+  #wrap div#c-single-tle h1.c-single-h1 {
+    font-size: 1.4rem;
+    margin-bottom: -5px;
+  }
+}
+#wrap div#c-single-tle p button {
+  margin: 0;
 }
 #wrap > p {
   line-height: 1.7;

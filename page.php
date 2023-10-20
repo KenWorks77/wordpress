@@ -2,7 +2,7 @@
 <?php
   if (have_posts()):
     while (have_posts()): ?>
-    <h1 class="c-single-h1 fade-in"><?php the_title(); ?></h1>
+    <div id="c-single-tle"><h1 class="c-single-h1 fade-in"><?php the_title(); ?></h1></div>
     <?php the_post(); ?>
     <p><?php the_content(); ?></p>
 <?php

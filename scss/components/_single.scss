@@ -4,12 +4,20 @@
   div#c-single-tle {
     align-items: center;
     display: flex;
-    margin-bottom: -10px;
     justify-content: space-between;
     padding: 25px 0 0 0;
     h1.c-single-h1 {
       color: g.$mainColor;
       font-size: g.$xxlFontSize;
+      @include g.mediaQuery(sp) {
+        font-size: g.$xlFontSize;
+        margin-bottom: -5px;
+      }
+    }
+    p {
+      button {
+        margin: 0;
+      }
     }
   }
   > p {
