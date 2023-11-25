@@ -53,7 +53,7 @@ function get_first_image_url() {
     }
   }
 
-	// display access count on edit page
+  // display access count on edit page
   function manage_posts_columns($columns) {
     $columns['post_views_count'] = 'アクセス数';
     return $columns;
