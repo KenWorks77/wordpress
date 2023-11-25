@@ -70,3 +70,6 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/swiper-setting.js"></script>
+
+<!-- アクセス数計測 -->
+<?php if(!is_user_logged_in() && !is_robots()) {set_post_views(get_the_ID());} ?>

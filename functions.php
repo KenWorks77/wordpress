@@ -39,6 +39,39 @@ function get_first_image_url() {
   return $first_img;
 }
 
+  // access count
+  function set_post_views($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+      $count = 0;
+      delete_post_meta($postID, $count_key);
+      add_post_meta($postID, $count_key, '0');
+    }else{
+      $count++;
+      update_post_meta($postID, $count_key, $count);
+    }
+  }
+
+	// display access count on edit page
+  function manage_posts_columns($columns) {
+    $columns['post_views_count'] = 'アクセス数';
+    return $columns;
+  }
+  function add_column($column_name, $post_id) {
+    if ($column_name == 'post_views_count') {
+        $stitle = get_post_meta($post_id, 'post_views_count', true);
+    }
+    if (isset($stitle) && $stitle) {
+      echo attribute_escape($stitle);
+    }
+    else {
+      echo __('None');
+    }
+  }
+  add_filter( 'manage_posts_columns', 'manage_posts_columns' );
+  add_action( 'manage_posts_custom_column', 'add_column', 10, 2 );
+
   // Custom Post Type UIを使用しなかった場合以下を記述（固定ページの登録も必要） 
   // function add_custom_post_type() {
     // $args = array(
