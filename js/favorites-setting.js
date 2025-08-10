@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const showFaves = document.getElementById('faves');
   const addBtnArr = document.querySelectorAll('.add-favorite');
   const expirationDate = new Date();
-  expirationDate.setDate(expirationDate.getDate() + 30);
+  expirationDate.setDate(expirationDate.getDate() + 180);
   if (document.cookie.includes('fave-pages')) {
     getCookieData(showFaves, expirationDate, addBtnArr);
   }
